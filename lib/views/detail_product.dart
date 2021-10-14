@@ -4,7 +4,7 @@ import 'package:logitechapp/constants.dart';
 import 'package:logitechapp/models/product.dart';
 
 class DetailProduct extends StatefulWidget {
-  final Product product;
+  final Product? product;
   DetailProduct({this.product});
 
   @override
@@ -65,7 +65,7 @@ class _DetailProductState extends State<DetailProduct> {
                           SizedBox(
                             width: 250.0,
                             child: Text(
-                              widget.product.name,
+                              widget.product!.name!,
                               style: kTitleStyle.copyWith(fontSize: 35.0),
                             ),
                           ),
@@ -76,7 +76,7 @@ class _DetailProductState extends State<DetailProduct> {
                             text: TextSpan(
                               children: [
                                 TextSpan(
-                                  text: widget.product.dpi,
+                                  text: widget.product!.dpi,
                                   style: kSubtitleStyle.copyWith(
                                       fontWeight: FontWeight.bold),
                                 ),
@@ -101,7 +101,7 @@ class _DetailProductState extends State<DetailProduct> {
                                     style:
                                         kTitleStyle.copyWith(fontSize: 13.0)),
                                 TextSpan(
-                                  text: widget.product.price,
+                                  text: widget.product!.price,
                                   style: kSubtitleStyle.copyWith(
                                       fontWeight: FontWeight.bold),
                                 ),
@@ -123,7 +123,7 @@ class _DetailProductState extends State<DetailProduct> {
                       top: 100.0,
                       right: 0.0,
                       child: Image.asset(
-                        widget.product.image,
+                        widget.product!.image!,
                         fit: BoxFit.fill,
                         width: 250,
                       ),
@@ -196,7 +196,7 @@ class _DetailProductState extends State<DetailProduct> {
                   children: [
                     SizedBox(
                       width: 180.0,
-                      child: Text(widget.product.name, style: kH2Style),
+                      child: Text(widget.product!.name!, style: kH2Style),
                     ),
                     Spacer(),
                     Row(
@@ -229,7 +229,7 @@ class _DetailProductState extends State<DetailProduct> {
               Padding(
                 padding: EdgeInsets.all(18),
                 child:
-                    Text(widget.product.description, style: kDescriptionStyle),
+                    Text(widget.product!.description!, style: kDescriptionStyle),
               ),
               SizedBox(height: 70.0),
             ],

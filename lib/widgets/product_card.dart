@@ -3,7 +3,7 @@ import 'package:logitechapp/constants.dart';
 import 'package:logitechapp/models/product.dart';
 
 class ProductCard extends StatelessWidget {
-  final Product product;
+  final Product? product;
   ProductCard({this.product});
   @override
   Widget build(BuildContext context) {
@@ -20,12 +20,12 @@ class ProductCard extends StatelessWidget {
         children: [
           SizedBox(
             width: 150,
-            child: Text(product.name, style: kTitleStyle),
+            child: Text(product!.name!, style: kTitleStyle),
           ),
           Expanded(
             child: Center(
               child: Image.asset(
-                product.image,
+                product!.image!,
                 fit: BoxFit.cover,
               ),
             ),
@@ -36,7 +36,7 @@ class ProductCard extends StatelessWidget {
               children: [
                 TextSpan(
                     text: "\$  ", style: kTitleStyle.copyWith(fontSize: 13.0)),
-                TextSpan(text: product.price, style: kTitleStyle),
+                TextSpan(text: product!.price, style: kTitleStyle),
               ],
             ),
           )

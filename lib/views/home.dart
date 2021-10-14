@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:logitechapp/constants.dart';
 import 'package:logitechapp/models/category.dart';
 import 'package:logitechapp/models/product.dart';

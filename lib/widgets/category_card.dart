@@ -4,7 +4,7 @@ import 'package:logitechapp/constants.dart';
 import 'package:logitechapp/models/category.dart';
 
 class CategoryCard extends StatelessWidget {
-  final Category category;
+  final Category? category;
   CategoryCard({this.category});
   @override
   Widget build(BuildContext context) {
@@ -31,13 +31,13 @@ class CategoryCard extends StatelessWidget {
               radius: 20.0,
               backgroundColor: Colors.white,
               child: SvgPicture.asset(
-                category.icon,
+                category!.icon!,
                 width: 18.0,
               ),
             ),
             Spacer(),
             Text(
-              category.title,
+              category!.title!,
               style: kCategoryTextStyle.copyWith(color: Colors.white),
             )
           ],

@@ -1,9 +1,9 @@
 class Product {
-  final String name;
-  final String price;
-  final String description;
-  final String dpi;
-  final String image;
+  final String? name;
+  final String? price;
+  final String? description;
+  final String? dpi;
+  final String? image;
   Product({this.description, this.dpi, this.name, this.price, this.image});
 }
 
